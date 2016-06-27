@@ -120,20 +120,22 @@ function template_html_above()
 		var ajax_notification_cancel_text = "', $txt['modify_cancel'], '";
 	// ]]></script>';
 
+	//BSC - 01/31/2015 - updated from M&L to Morgopolis
 	echo '
 	<meta http-equiv="Content-Type" content="text/html; charset=', $context['character_set'], '" />
 	<meta name="description" content="', $context['page_title_html_safe'], '" />', !empty($context['meta_keywords']) ? '
 	<meta name="keywords" content="' . $context['meta_keywords'] . '" />' : '', '
-	<title>Forums - Magicians and Looters</title>';
+	<title>Forums - Morgopolis Studios</title>';
 
 //BSC - 10/16/2011 - added shortcut icon
 //BSC - 12/04/2011 - adding link to main stylesheet
 //BSC - 07/22/2012 - updating to match new theme
 //BSC - 07/27/2012 - updated icon
+//BSC - 06/26/2016 - ditched old stupid stylesheet
 echo '
-	<link rel="shortcut icon" type="image/x-icon" href="http://mal-game.com/favicon.ico" />
-	<link rel="icon" href="http://mal-game.com/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="http://mal-game.com/style/v7.css" />';
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="http://mal-game.com/stylesheets/site.css" />';
   
 //BSC - 12/26/2011 - adding Google Analytics
 //BSC - 03/17/2014 - removed Google Analytics, since we don't need to track our own forum usage (yet).
@@ -184,24 +186,9 @@ function template_body_above()
 
 //BSC - 12/04/2011 - making forums match the new theme - START
 //BSC - 07/22/2012 - updating to match new theme
+//BSC - 01/31/2015 - removing the menu, since forums aren't public anymore.
+//BSC - 06/26/2016 - completely removed header
 echo '
-<div class="region">
-    <div id="header-social">
-        <a href="http://www.twitter.com/Morgopolis" title="Twitter" class="social-twitter"></a>
-        <a href="http://www.facebook.com/pages/Magicians-and-Looters/242597565809642" title="Facebook" class="social-facebook"></a>
-    </div>
-    <div id="header-company-logo"></div>
-    <div id="header-title">
-        <a href="http://mal-game.com/" title="Home" class="title-image"></a>
-        <div id="menu-items">
-            <a href="http://www.reddit.com/r/morgopolis" title="Reddit" class="menu-item-reddit"></a>
-            <div class="menu-item-forum-here"></div>
-            <a href="http://morgopolisstudios.bandcamp.com/" title="Music" class="menu-item-music"></a>
-            <a href="http://mal-game.com/contact/" title="Contact" class="menu-item-contact"></a>
-        </div>
-    </div>
-</div>
-
 <div class="region">';
 
     // Show the menu here, according to the menu sub template.

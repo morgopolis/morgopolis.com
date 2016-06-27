@@ -135,7 +135,7 @@ function template_html_above()
 echo '
 	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" type="text/css" href="http://mal-game.com/stylesheets/site.css" />';
+	<link rel="stylesheet" type="text/css" href="http://mal-game.com/stylesheets/site.css?1" />';
   
 //BSC - 12/26/2011 - adding Google Analytics
 //BSC - 03/17/2014 - removed Google Analytics, since we don't need to track our own forum usage (yet).
